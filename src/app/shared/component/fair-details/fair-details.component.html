@@ -1,0 +1,10 @@
+<h2 class="text-center">{{fairobj.fairName}}</h2>
+<div class="fair">
+    <div class="banner">
+        <img [src]="fairobj.bannerUrl" [alt]="fairobj.fairName" [title]="fairobj.fairName" class="fairimg" >
+    </div>
+    <p [innerHTML]="fairobj.candidateDescription"></p>
+    <p>{{fairobj.fairStartTime}}</p>
+    <p>{{fairobj.startDate *1000| date }}</p>
+    <p>{{fairobj.endDate *1000 | date}}</p>
+</div>

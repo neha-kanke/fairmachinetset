@@ -1,0 +1,24 @@
+.faircard{
+    position: relative;
+    cursor: pointer;
+    background-color: rgb(27, 225, 159);
+    color: black;
+    .onlydate{
+        position: relative;
+        color: black;
+        background-color: white;
+        padding: 15px;
+        border-radius: 5px;
+    }
+    &.active::after{
+        position: absolute;
+        top:50%;
+        right: -7px;
+        content: '';
+        width: 15px;
+        height: 15px;
+        background-color: rgb(27, 225, 159);
+        color: aquamarine;
+        transform: rotate(45deg);
+    }
+}

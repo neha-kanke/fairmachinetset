@@ -1,0 +1,17 @@
+
+<div class="card mb-3 faircard  " (click)="onacard()" [ngClass]="{
+    'active':fairobj.fairId===selesectfair
+
+}"
+>
+    <div class="card-body">
+        <h5>
+            {{fairobj.fairName}}
+        </h5>
+        <div class="onlydate">
+            <p class="m-0">  EventType:{{fairobj.type}}</p>
+            <p class="m-0">  StartDate :{{fairobj.startDate *1000 |date}}</p>
+            <p class="m-0">  EndDate :{{fairobj.endDate *1000 |date}}</p>
+        </div>
+    </div>
+</div>
