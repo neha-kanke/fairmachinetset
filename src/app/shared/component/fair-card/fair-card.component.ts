@@ -7,18 +7,18 @@ import { Ifairs } from '../../model/fairs';
   styleUrls: ['./fair-card.component.scss']
 })
 export class FairCardComponent implements OnInit {
-  @Input() fairobj!: Ifairs
+  @Input() fairarr!: Array<Ifairs>
   selesectfair !:string
   @Output() fairidemit: EventEmitter<string> = new EventEmitter<string>()
   constructor() { }
 
   ngOnInit(): void {
   }
-  oncard(fairobj: any) {
-    console.log(fairobj);
+
+  onacard(fairId:string) {
+    this.fairidemit.emit(fairId)
+    this.selesectfair=fairId
+  
   }
-  onacard() {
-    this.fairidemit.emit(this.fairobj.fairId)
-    this.selesectfair=this.fairobj.fairId
-  }
+  
 }

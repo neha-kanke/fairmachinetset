@@ -1,8 +1,7 @@
 <div class="row">
     <div class="col-md-5">
         <ng-container *ngIf="fairarr.length>0;else data">
-            <app-fair-card [fairobj]="fair" *ngFor="let fair of fairarr" (fairidemit)="onfaird($event)">
-                {{fair.fairName}}
+            <app-fair-card [fairarr]="fairarr"  (fairidemit)="onfaird($event)">
              </app-fair-card>
         </ng-container>
         <ng-template #data>

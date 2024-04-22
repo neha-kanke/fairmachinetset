@@ -1,7 +1,8 @@
-.banner{
+.banner {
     position: relative;
     height: 300px;
-    .fairimg{
+
+    .fairimg {
         position: absolute;
         top: 0;
         left: 0;
@@ -9,4 +10,21 @@
         height: 100%;
         object-fit: cover;
     }
+}
+
+.fairschool span {
+    color: white;
+    background-color: #dddcdc;
+    padding: 10px 30px;
+    display: block;
+    font-weight: 700;
+    border-radius: 5px;
+    font-size: 15px;
+
+}
+
+.heading {
+    color: #c0bbbb;
+    margin-bottom: 10px;
+
 }

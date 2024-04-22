@@ -1,17 +1,16 @@
-
-<div class="card mb-3 faircard  " (click)="onacard()" [ngClass]="{
-    'active':fairobj.fairId===selesectfair
-
-}"
->
+<div class="card mb-3 faircard  "   *ngFor="let fair of fairarr" (click)="onacard(fair.fairId)" [ngClass]="{
+    active:fair.fairId===selesectfair
+}">
     <div class="card-body">
         <h5>
-            {{fairobj.fairName}}
+            {{fair.fairName}}
         </h5>
         <div class="onlydate">
-            <p class="m-0">  EventType:{{fairobj.type}}</p>
-            <p class="m-0">  StartDate :{{fairobj.startDate *1000 |date}}</p>
-            <p class="m-0">  EndDate :{{fairobj.endDate *1000 |date}}</p>
+           <p class="m-0 d-flex justify-content-between" > <span>EventType:{{fair.type}}</span>
+            <span>Schoole:{{fair.numberOfSchoolsRegistered}}</span></p>
+            <p class="m-0 d-flex justify-content-between"> <span>StartDate :{{fair.startDate *1000|date}}</span>
+            <span>Job :{{fair.numberOfUsersRegistered}}</span></p>
+            <p class="m-0"> EndDate : {{fair.endDate*1000|date}}</p> 
         </div>
     </div>
 </div>

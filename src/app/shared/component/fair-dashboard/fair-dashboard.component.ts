@@ -14,6 +14,7 @@ fairarr:Array<Ifairs>=fairsArr
   constructor() { }
 
   ngOnInit(): void {
+    this.fairobj=fairsArr[0]
   }
   onfaird(id:string){
     this.fairobj=this.fairarr.find((fair:Ifairs)=>fair.fairId===id)!
