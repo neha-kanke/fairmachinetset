@@ -8,39 +8,31 @@
     <span class="mr-3"><i class="fa-solid fa-school mr-2"></i>{{fairobj.numberOfSchoolsRegistered}} Attending schole</span>
     <span> <i class="fa-solid fa-user-doctor mr-2"></i>Job At Schools Attending</span>
    </div>
-   
-   <!-- <div class="row">
-    <div class="col-md-6">
-        <i class="fa-solid fa-globe "></i><a href="https://iss.6connex.com/event/ISS-events/3marchevent/register"></a>
-    </div> -->
    </div>
    <div class="row border-b">
     <div class="col-md-6">
-        <h5 class="heading text-uppercase">location</h5>
-      <i class="fas fa-map-marker-alt fa-2x mb-3"></i>
-      <h2 class="heading">event dates & times</h2>
+        <h5 class="heading text-uppercase">verture event</h5>
+      <i class="fa-solid fa-globe fa-1x mb-3 logo"></i><a href="https://iss.6connex.com/event/ISS-events/3marchevent/register" target="_blank">
+        https://iss.6connex.com/event/ISS-events/3marchevent/register
+      </a>
+
+      
+      <h5 class="heading">event dates & times</h5>
       <div class="event-dt">
         <p>
-          <span>{{fairobj.startDate *1000 | date}} </span>
+          <span>{{fairobj.startDate *1000 | date}}  <span>Starttime:{{fairobj.fairStartTime}}</span></span>
         </p>
         <p>
-          <span>{{fairobj.endDate *1000 | date}} </span>
+          <span>{{fairobj.endDate *1000 | date}}  <span>Endtime:{{fairobj.fairEndTime}}</span> </span>
         </p>
       </div>
     </div>
-    <!-- <div class="col-md-6">
-      <h3 class="sec-heading">
-        selected time zone
-      </h3>
-      <p class="pri-para">Thu Feb 09 2023 11:30:00 GMT+0530 (India Standard Time)</p>
-      <h4 class="sec-heading">other time zone</h4>
-      <span class="editZone">edit time zones</span>
-    </div> -->
+
 
 </div>
 <hr>
 <h3 class="heading">Decribation</h3>
-    <p [innerHTML]="fairobj.candidateDescription"></p>
+    <p [innerHTML]="fairobj.candidateDescription " ></p>
     <p>{{fairobj.fairStartTime}}</p>
     <p>{{fairobj.startDate *1000 | date }}</p>
     <p>{{fairobj.endDate *1000 | date}}</p>
